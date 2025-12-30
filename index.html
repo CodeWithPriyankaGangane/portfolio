@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Priyanka | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+/* ===== GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  transition: all 0.3s ease;
+}
+
+body {
+  background: #1f252b;
+  color: #eaeaea;
+  line-height: 1.7;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2c3238;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.nav-icons i {
+  margin-left: 15px;
+  color: #f1c40f;
+  cursor: pointer;
+}
+
+/* ===== HERO ===== */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
+  min-height: 90vh;
+  animation: fadeIn 1.2s ease-in;
+}
+
+.hero-left {
+  width: 55%;
+}
+
+.hero-left h1 {
+  font-size: 48px;
+  color: #f1c40f;
+}
+
+.hero-left p {
+  margin: 20px 0;
+  max-width: 600px;
+  color: #ddd;
+}
+
+.hero-left h2 {
+  margin: 30px 0 20px;
+  color: #d7b98e;
+}
+
+.social {
+  display: flex;
+  gap: 40px;
+}
+
+.social-box {
+  text-align: center;
+}
+
+.social-box i {
+  font-size: 32px;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #4caf50, #2ecc71);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 14px;
+  border: none;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(76,175,80,0.3);
+}
+
+/* ===== IMAGE ===== */
+.hero-right img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 60px 80px;
+  animation: fadeIn 1.2s ease-in;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f1c40f;
+}
+
+.center-text {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  color: #ddd;
+}
+
+.dark {
+  background: #181c21;
+}
+
+/* ===== SKILLS ===== */
+.skill {
+  max-width: 500px;
+  margin: 15px auto;
+}
+
+.bar {
+  background: #333;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.bar span {
+  display: block;
+  height: 10px;
+  background: #4caf50;
+}
+
+/* ===== PROJECTS ===== */
+.projects {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background: #2c3238;
+  padding: 20px;
+  width: 250px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== CONTACT ===== */
+.contact-form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  font-size: 14px;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .hero-left, .hero-right { width: 100%; }
+  .hero-right img { margin-top: 30px; width: 220px; }
+  .social { justify-content: center; flex-wrap: wrap; }
+  .section { padding: 40px 20px; }
+}
+.hero-right {
+  flex: 1.2;                 /* Increase space for right side */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-right img {
+  width: 500px;              /* Increase image size */
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* ===== RESUME BUTTONS ===== */
+.resume-buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.resume-btn {
+  padding: 12px 26px;
+  font-size: 14px;
+}
+
+/* Outline button */
+.resume-btn.outline {
+  background: transparent;
+  border: 2px solid #4caf50;
+  justify-content: center; 
+  color: #4caf50;
+}
+
+.resume-btn.outline:hover {
+  background: #4caf50;
+  color: white;
+}
+
+.skills-section {
+  padding: 60px 80px;
+  background: #1c2228;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  color: #f1c40f;
+  margin-bottom: 40px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.skill-card {
+  background: #242b31;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+}
+
+.skill-card h3 {
+  color: #ff9800;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.skill-card i {
+  margin-right: 8px;
+}
+
+.progress {
+  background: #555;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 10px 0 15px;
+  height: 14px;
+}
+
+.progress span {
+  display: block;
+  height: 100%;
+  background: #1abc9c;
+  color: #fff;
+  font-size: 12px;
+  text-align: right;
+  padding-right: 8px;
+  line-height: 14px;
+}
+
+.skill-card p {
+  font-size: 14px;
+  color: #cfcfcf;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 40px 20px;
+  }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo"><i class="fa-solid fa-user"></i> Priyanka Dattatray Gangane</div>
+  <div class="nav-icons">
+    <i class="fa-solid fa-pen"></i>
+    <i class="fa-solid fa-phone"></i>
+    <i class="fa-solid fa-envelope"></i>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-left">
+    <h1>I am a <span class="typing"></span></h1>
+    <p>
+      Computer Engineering graduate with interest in frontend development
+      and programming. Passionate about building clean and responsive web
+      applications.
+    </p>
+
+    <h2>Social Links</h2>
+  <div class="social">
+    <div class="social-box">
+      <i class="fa-brands fa-github"></i>
+     <p>GitHub</p>
+      <a href="https://github.com/CodeWithPriyankaGangane"
+       class="btn"
+       target="_blank">
+       Visit
+      </a>
+  </div>
+
+  <div class="social-box">
+    <i class="fa-brands fa-linkedin"></i>
+    <p>LinkedIn</p>
+    <a href="https://www.linkedin.com/in/priyanka-gangane-24761b331/"
+       class="btn"
+       target="_blank">
+       Visit
+    </a>
+  </div>
+</div>
+</div>
+
+  <div class="hero-right">
+    <img src="UPriyanka1234.png" alt="Profile">
+  </div>
+  
+</section>
+
+<section class="section">
+  <h2>About Me</h2>
+  <p class="center-text">
+    I am a fresher software developer with knowledge of HTML, CSS,
+    JavaScript, and Java. I am looking for an opportunity to start my
+    career and grow as a developer.
+  </p>
+</section>
+
+<section class="skills-section">
+  <h2 class="section-title">Skills</h2>
+
+  <div class="skills-grid">
+
+    <!-- Java -->
+    <div class="skill-card">
+      <h3><i class="fa-brands fa-java"></i> Java</h3>
+      <div class="progress">
+        <span style="width:85%">85%</span>
+      </div>
+      <p>
+        Core Java, Object-Oriented Programming, Data Structures,
+        Control Structures, Exception Handling, File Handling
+      </p>
+    </div>
+
+   <!-- Spring Boot -->
+<div class="skill-card">
+  <h3>
+    <i class="fa-solid fa-leaf"></i> Spring Boot
+  </h3>
+  <div class="progress">
+    <span style="width:85%">85%</span>
+  </div>
+  <p>
+    Spring MVC, Spring Data JPA, Dependency Injection,
+    REST Controllers, Validation, Security, Configuration
+  </p>
+</div>
+
+<!-- REST API -->
+<div class="skill-card">
+  <h3>
+    <i class="fa-solid fa-gear"></i> REST API
+  </h3>
+  <div class="progress">
+    <span style="width:75%">75%</span>
+  </div>
+  <p>
+    RESTful Services, HTTP Methods, JSON Handling,
+    Exception Handling, API Design Best Practices
+  </p>
+</div>
+
+    <!-- JavaScript -->
+    <div class="skill-card">
+      <h3><i class="fa-brands fa-js"></i> JavaScript</h3>
+      <div class="progress">
+        <span style="width:60%">60%</span>
+      </div>
+      <p>
+        Variables, Data Types, Functions, DOM Manipulation,
+        Objects & Arrays, Web Development
+      </p>
+    </div>
+
+    <!-- React -->
+    <div class="skill-card">
+      <h3><i class="fa-brands fa-react"></i> React JS</h3>
+      <div class="progress">
+        <span style="width:40%">40%</span>
+      </div>
+      <p>
+        JSX, Components, Props, State, Event Handling
+      </p>
+    </div>
+
+    <!-- HTML -->
+    <div class="skill-card">
+      <h3><i class="fa-brands fa-html5"></i> HTML</h3>
+      <div class="progress">
+        <span style="width:100%">100%</span>
+      </div>
+      <p>
+        Semantic Elements, Forms, Multimedia,
+        Responsive Web Design
+      </p>
+    </div>
+
+    <!-- CSS -->
+    <div class="skill-card">
+      <h3><i class="fa-brands fa-css3-alt"></i> CSS</h3>
+      <div class="progress">
+        <span style="width:90%">90%</span>
+      </div>
+      <p>
+        Box Model, Layouts, Animations,
+        Grid, Flexbox, Responsive Design
+      </p>
+    </div>
+
+    <!-- MySQL -->
+    <div class="skill-card">
+      <h3><i class="fa-solid fa-database"></i> MySQL</h3>
+      <div class="progress">
+        <span style="width:70%">70%</span>
+      </div>
+      <p>
+        Database Design, CRUD Operations,
+        SQL Queries
+      </p>
+    </div>
+
+    <!-- Azure -->
+    <div class="skill-card">
+      <h3><i class="fa-brands fa-microsoft"></i> Azure</h3>
+      <div class="progress">
+        <span style="width:45%">45%</span>
+      </div>
+      <p>
+        Azure Virtual Machines, App Service,
+        Azure SQL Database, Storage Accounts,
+        Azure Active Directory
+      </p>
+    </div>
+
+    <!-- Git & GitHub -->
+    <div class="skill-card">
+      <h3><i class="fa-brands fa-github"></i> Git & GitHub</h3>
+      <div class="progress">
+        <span style="width:65%">65%</span>
+      </div>
+      <p>
+        Version Control, Branching, Merging,
+        Collaboration, Remote Repositories
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="project-card">
+      <h3>TinyLink</h3>
+      <p>URL shortener web app</p>
+      <a class="btn" href="#">Live</a>
+      <a class="btn" href="#">GitHub</a>
+    </div>
+    <div class="project-card">
+      <h3>Library Management</h3>
+      <p>Frontend web project</p>
+      <a class="btn" href="#">Live</a>
+      <a class="btn" href="#">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<div class="resume-buttons">
+  
+  <a href="Priyanka_Gangane_Resume.pdf" target="_blank" class="btn">
+  <i class="fa-solid fa-eye"></i> View Resume
+</a>
+
+<a href="Priyanka_Gangane_Resume.pdf" download class="btn outline">
+  <i class="fa-solid fa-download"></i> Download Resume
+</a>
+</div>
+
+
+<section class="section dark">
+  <h2>Contact Me</h2>
+  <form class="contact-form">
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea placeholder="Message"></textarea>
+    <button class="btn">Send</button>
+  </form>
+</section>
+
+<footer>
+  © 2025 Priyanka | Portfolio
+</footer>
+
+<script>
+const roles = ["Frontend Developer", "Java Full Stack Developer", "Aspiring Programmer"];
+let i = 0, j = 0;
+const el = document.querySelector(".typing");
+
+function type() {
+  if (j < roles[i].length) {
+    el.textContent += roles[i][j++];
+    setTimeout(type, 100);
+  } else setTimeout(erase, 1500);
+}
+function erase() {
+  if (j > 0) {
+    el.textContent = roles[i].slice(0, --j);
+    setTimeout(erase, 60);
+  } else {
+    i = (i + 1) % roles.length;
+    setTimeout(type, 500);
+  }
+}
+type();
+</script>
+
+</body>
+</html>
